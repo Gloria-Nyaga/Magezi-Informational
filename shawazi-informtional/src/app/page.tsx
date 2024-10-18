@@ -3,7 +3,7 @@ import Services from "./components/Services";
 import LandingPage from "./components/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
-import About from './components/about_us'
+import About from './components/About_us'
 import QuestionSection from './components/Insights';
 import Ratings from "./components/Ratings";
 import Contact from "./components/Contacts";

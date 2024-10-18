@@ -14,7 +14,8 @@ theme: {
       hover: "#508408",
       white: "#FFFFFF",
       tertiary: '#3E1C00',
-      foreground: "var(--foreground)",
+      foreground: "#508408",
+      'secondary-light': '#FFEDD5',
     },
     screens: {
       'xs': '480px',

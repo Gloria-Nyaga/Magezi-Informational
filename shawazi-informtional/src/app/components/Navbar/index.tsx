@@ -14,14 +14,14 @@ const HamburgerMenu = ({ isOpen, toggleMenu }: HamburgerMenuProps) => {
   return (
     <button
       onClick={toggleMenu}
-      className="md:hidden flex flex-col justify-center items-center space-y-1 z-50"
+      className="lg:hidden flex flex-col justify-center items-center space-y-1 z-50"
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
     >
       {isOpen ? (
-        <FaTimes className="w-6 h-6 text-gray-800" />
+        <FaTimes className="w-6 h-6 md:h-10 md:w-8 md:w-10 text-gray-800" />
       ) : (
-        <FaBars className="w-6 h-6 text-gray-800" />
+        <FaBars className="w-6 h-6 md:h-12 md:w-8 text-gray-800" />
       )}
     </button>
   );
@@ -30,7 +30,7 @@ const HamburgerMenu = ({ isOpen, toggleMenu }: HamburgerMenuProps) => {
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  
+
   const isActive = (href: string) => pathname === href;
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -55,15 +55,18 @@ const Navbar = () => {
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center ml-4 md:ml-12 mr-10">
           <Image
-            src="/images/shawazilogo.png"
+            src="/images/shawazi-logo.png"
             alt="logo"
-            className="h-16 md:h-24 lg:h-32"
+            width={120} 
+            height={40}
+            className="h-[50px] w-[50px] sm:h-[20px] sm:w-[60px] md:h-[70px] md:w-[70px] lg:h-[90px] lg:w-[90px]" 
           />
         </div>
         <HamburgerMenu isOpen={menuOpen} toggleMenu={toggleMenu} />
       </div>
 
-      <nav className={`hidden md:flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-amber-950 mr-16`}>
+      {/* Navbar for larger screens */}
+      <nav className={`hidden lg:flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-8 text-amber-950 mr-16`}>
         {[
           { href: '/', label: 'Home' },
           { href: '#Products', label: 'Products' },
@@ -75,7 +78,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={href}
-            className={`flex items-center gap-2 ${isActive(href) ? 'font-bold text-orange-500' : 'hover:text-orange-500'}`}
+            className={`flex items-center gap-2 text-lg sm:text-[20px] md:text-[18px] lg:text-[22px] xl:text-[25px] ${isActive(href) ? 'font-bold text-orange-500' : 'hover:text-orange-500'}`} // Responsive font sizes
             onClick={(e) => handleLinkClick(e, href.substring(1))}
           >
             {label}
@@ -102,7 +105,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 href={href}
-                className={`flex items-center gap-2 text-base sm:text-lg md:text-xl py-2 ${isActive(href) ? 'font-bold text-orange-500' : 'hover:text-orange-500'}`}
+                className={`flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-[26px] py-2 ${isActive(href) ? 'font-bold text-orange-500' : 'hover:text-orange-500'}`} // Adjusted font sizes for mobile menu
                 onClick={(e) => handleLinkClick(e, href.substring(1))}
               >
                 {label}

@@ -31,16 +31,14 @@ const QuestionSection = () => {
 
   return (
     <div className="max-w-full md:mx-10 lg:mx-20 p-4 font-jost">
-              <div id='Insights'> </div>
+        <div id='Insights'> </div>
 
-      <div className="flex items-center justify-center mb-4">
-        <div className="w-[500px] h-[2px] bg-primary mr-8"></div>
-        <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-4xl font-bold text-primary mt-4 mb-6 text-center">
-          Insights
-        </h1>
-        <div className="w-[500px] h-[2px] bg-primary ml-8"></div>
-      </div>
-      <h2 className="text-lg sm:text-xl md:text-lg lg:text-lg mb-4 text-center text-black">
+        <div className="flex items-center justify-center mb-8">
+          <hr className="w-1/4 sm:w-1/2 border-t-2 ml-4 border-[#3E1C00] mb-3" />
+          <h1 className="mx-6 text-[30px] sm:text-[30px] md:text-[35px] font-bold lg:text-[35px] text-center">Insights</h1>
+          <hr className="w-1/4 sm:w-1/2 border-t-2 border-[#3E1C00] mb-3" />
+        </div>
+      <h2 className="text-center text-black mb-8 text-[18px] sm:text-[20px] md:text-3xl lg:text-[25px] mt-[4px]">
         Answers to questions about Shawazi
       </h2>
       {questions_answers.map((insight, index) => (
