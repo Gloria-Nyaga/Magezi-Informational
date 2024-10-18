@@ -1,5 +1,7 @@
 "use client";
+
 import Image from 'next/image';
+import Link from 'next/link';
 
 const LandingPage = () => {
   return (
@@ -24,12 +26,19 @@ const LandingPage = () => {
 </div>
 
 <div className="flex flex-row gap-2 sm:gap-4 mt-4 md:mt-5 justify-start">
-  <button className="px-2 py-1 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-10 lg:py-4 bg-[#3E1C00] text-white font-bold shadow-md hover:bg-[#D3B683] rounded-lg text-sm lg:text-[25px] 2xl:text-lg">
-    Sign Up for Free
-  </button>
-  <button className="px-2 py-1 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-10 lg:py-4 border-2 border-[#3E1C00] text-[#3E1C00] font-bold shadow-md hover:bg-[#D3B683] hover:text-white rounded-lg text-sm lg:text-[25px] 2xl:text-lg">
-    Learn More
-  </button>
+
+  <Link href="https://magezi-frontend-5csx.vercel.app/">
+    <button className="px-2 py-1 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-10 lg:py-4 bg-[#3E1C00] text-white font-bold shadow-md hover:bg-[#D3B683] rounded-lg text-sm lg:text-[25px] 2xl:text-lg">
+      Sign Up for Free
+    </button>
+  </Link>
+
+  <Link href="#Insights">
+      <button className="px-2 py-1 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-10 lg:py-4 border-2 border-[#3E1C00] text-[#3E1C00] font-bold shadow-md hover:bg-[#D3B683] hover:text-white rounded-lg text-sm lg:text-[25px] 2xl:text-lg">
+        Learn More
+      </button>
+  </Link>
+
 </div>
 
           </div>

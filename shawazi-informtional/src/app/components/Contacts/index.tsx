@@ -40,7 +40,7 @@ const Contact= () => {
           <h2 className="font-bold mb-6 text-primary text-[20px] sm:text-[30px]">
             Contact Information
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <p className="flex items-center text-[20px] sm:text-[25px] gap-x-3">
               <Mail className="w-6 h-6 flex-shrink-0" />
               <span className="text-[16px] sm:text-[25px]">
@@ -48,7 +48,7 @@ const Contact= () => {
                 shawazi5@gmail.com
               </span>
             </p>
-            <p className="flex items-center text-[20px] sm:text-[25px] gap-x-3">
+            <p className="flex items-center text-[20px] mr-24 sm:text-[25px] gap-x-3">
               <Phone className="w-6 h-6 flex-shrink-0" />
               <span className="text-[16px] sm:text-[25px]">
                 Phone Number: <br />
